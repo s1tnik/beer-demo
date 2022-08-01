@@ -32,7 +32,7 @@ const Beer: NextPage = () => {
 
         if (selectedBeer) {
 
-            const {name, description, first_brewed, image_url, brewers_tips} = selectedBeer;
+            const {name, description, first_brewed, image_url, brewers_tips, tagline, abv, food_pairing} = selectedBeer;
 
             return (
                 <div className="beer-container">
@@ -40,8 +40,12 @@ const Beer: NextPage = () => {
                     <div className="beer">
                         <div className="info">
                             <div>
-                                <h1>Name: {name}, First brewed: {first_brewed} </h1>
+                                <h1>Name: {name}, {tagline} ({abv}), First brewed: {first_brewed} </h1>
                                 <p>{description}</p>
+                            </div>
+                            <div>
+                                <h1>Food pairing:</h1>
+                                <p>{food_pairing.join(", ")}</p>
                             </div>
                             <div>
                                 <h1>Brewers tips:</h1>
