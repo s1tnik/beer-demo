@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  :global {
+
+    .heading-section {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      padding: 50px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 75px;
+      margin: 50px 0;
+
+      .heading-info {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        h1 {
+          font-size: 64px;
+          font-weight: 500;
+          line-height: 70px;
+          text-align: left;
+        }
+
+        p {
+          font-size: 21px;
+          font-weight: 400;
+          line-height: 30px;
+          text-align: left;
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+
+      .heading-image {
+        border-radius: 20px;
+        overflow: hidden;
+      }
+    }
+
+    .search-bar {
+      background: #FFFFFF;
+      border-radius: 20px;
+      margin-bottom: 50px;
+
+      > form {
+        padding: 35px;
+        display: flex;
+        gap: 15px;
+
+        input {
+          width: 100%;
+          background: #FFFFFF;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          padding: 15px 18px;
+
+          &::placeholder {
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+
+        button {
+          cursor: pointer;
+          width: content-box;
+          padding: 15px 90px;
+          background: #FF7522;
+          border-radius: 10px;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .cards-section {
+
+      margin-bottom: 20px;
+
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+      }
+
+    }
+
+    .loader {
+      width: 100%;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .message {
+      margin-bottom: 50px;
+      background: rgba(255, 255, 255);
+      border-radius: 20px;
+      padding: 25px;
+    }
+
+  }
+}
